@@ -15,7 +15,7 @@ function useFetch1(API) {
       try {
         const response = await fetch(API, { signal: controller.signal });
         if (!response.ok) {
-          throw new Error(`Request failed: ${response.status}`);
+          throw new Error(`Request failed and failed: ${response.status}`);
         }
 
         const data = await response.json();
